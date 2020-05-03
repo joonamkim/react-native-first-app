@@ -18,7 +18,7 @@ const reducer = (state, action) => {
 
 const CounterScreen = () => {
     // const [counter, setCounter] = useState(0);
-
+    //dispatch -- callMyReducer
     const [state, dispatch] = useReducer(reducer, {counter: 0});
     const {counter} = state;
 
@@ -37,7 +37,7 @@ const CounterScreen = () => {
             //     setCounter(counter - 1);
             // }
             }/>
-            <Text style={styles.textStyle}> Current Count: {counter} </Text>
+            <Text style={styles.textStyle}> Current Count: {state.counter} </Text>
         </View>
     );
 };
